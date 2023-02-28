@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd"
+  xmlns:p="http://www.springframework.org/schema/p"
+ >
+ <!-- this is our beans -->
+<bean id="ans1" class="com.springcore.mapcollection.Answer">  
+
+<constructor-arg name="answer" value="Java is a programming language"></constructor-arg>  
+ 
+</bean>  
+  
+<bean id="ans2" class="com.springcore.mapcollection.Answer">  
+
+<constructor-arg name="answer" value="Java is a Platform"></constructor-arg>  
+
+</bean>  
+ <bean name="user1" class="com.springcore.mapcollection.User">
+<constructor-arg name="id" value="44"/>
+<constructor-arg name="uname" value="vishruti"/>
+ </bean>
+ <bean name="user2" class="com.springcore.mapcollection.User">
+<constructor-arg name="id" value="64"/>
+<constructor-arg name="uname" value="adi" />
+ </bean>
+ <bean name="que1" class="com.springcore.mapcollection.Question">
+ <property name="id" value="32"/>
+ <property name="ques" value="what is java?"></property>
+ <property name="answers">
+ <map>
+ <entry key-ref="ans1" value-ref="user1"/>
+ 
+<entry key-ref="ans2" value-ref="user2"/>
+ 
+ </map>
+ </property>
+ </bean>
+ </beans>

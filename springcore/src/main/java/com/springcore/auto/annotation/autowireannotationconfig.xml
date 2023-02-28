@@ -1,0 +1,39 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+   <context:annotation-config/>
+ 
+ <!-- this is our beans -->
+ <bean name="address2" class="com.springcore.auto.annotation.Address">
+ <property name="city" value="junagadh"/>
+
+ </bean>
+ <bean name="address1" class="com.springcore.auto.annotation.Address">
+ <property name="city" value="ahemdabad"/>
+
+ </bean>
+ <!--byName used to Autowire
+  <bean name="emp1" class="com.springcore.auto.wire.Emp" autowire="byName"> 
+  
+ </bean>   -->
+ <!-- byType used to autowire
+ <bean name="emp1" class="com.springcore.auto.wire.Emp" autowire="byType"> 
+   
+ </bean> 
+    -->
+    
+    
+    <!-- autowire annotation used to autowire     -->
+    
+
+ <bean name="emp1" class="com.springcore.auto.annotation.Emp" > 
+   
+ </bean> 
+
+    
+ </beans>
